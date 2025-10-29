@@ -1,16 +1,15 @@
-console.log('Hello, World!');
-
-for (let i = 1; i <= 5; i++) {
-    console.log('Count: ', i);
+function changeTitle() {
+    let titleElement = document.querySelector('#title')
+    titleElement.innerHTML = '변신';
 }
 
-/* 1부터 1000까지의 수 중 3의 배수의 합을 구하는 코드
-let sum = 0;
+let eventTestButton = document.querySelector('#eventTestButton');
+eventTestButton.addEventListener('click', changeTitle);
 
-for (let i = 1; i <= 1000; i++) {
-    if (i % 5 === 0 || i % 3 === 0){
-        console.log('3의 배수: ', i);
-        sum += i;
-    }
-}
-console.log('3의 배수 합: ', sum); */
+let addHandsomeButton = document.querySelector('#addHandsomeButton');
+addHandsomeButton.addEventListener('click', () => {
+    let ulElement = document.querySelector('ul');
+    let newLi = document.createElement('li');
+    newLi.innerHTML = '박민수';
+    ulElement.appendChild(newLi);
+});
