@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또번호 자동 생성기</title>
+    <link rel="stylesheet" href="./lotto.css">
+</head>
+<body>
+    <!-- 히어로 섹션: 45개의 공이 떠다니는 영역 -->
+    <section class="hero-section">
+        <div id="balls-container" class="balls-container">
+            <!-- JavaScript로 45개의 공 생성 -->
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>🎰 로또번호 자동 생성기</h1>
+                <p class="hero-subtitle">당신의 행운을 찾아드립니다</p>
+                <p class="hero-description">1부터 45까지의 숫자 중 6개의 행운의 번호를 추천해 드립니다</p>
+            </div>
+            <button id="generate-btn" class="generate-btn">
+                <span class="btn-icon">🍀</span>
+                <span class="btn-text">로또번호 생성하기</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- 로또번호 표시 섹션 -->
+    <section class="result-section">
+        <h2>생성된 로또번호</h2>
+        <div id="current-numbers" class="current-numbers">
+            <p class="empty-message">버튼을 클릭하여 로또번호를 생성하세요</p>
+        </div>
+    </section>
+
+    <!-- 히스토리 섹션 -->
+    <section class="history-section">
+        <h2>생성 히스토리</h2>
+        <div id="history-list" class="history-list">
+            <p class="empty-message">아직 생성된 번호가 없습니다</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 로또번호 자동 생성기. Made with ❤️</p>
+    </footer>
+
+    <script src="./lotto.js"></script>
+</body>
+</html>
