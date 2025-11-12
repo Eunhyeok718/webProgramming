@@ -4,12 +4,19 @@ console.log(1);
 console.log(2);
 console.log(3);
 
-/* let sum = 0;
+// function worker() {
+//     return new Promise(function (resolve, reject) {
+//         let sum = 0;
+//         for (let i = 0; i < 100000000; i++) {
+//             sum += i;
+//         }
+//         resolve(sum);
+//     });
+// }
+// worker().then(result => console.log(result));
 
-for (let i = 0; i < 100000000; i++) {
-    sum += i;
-}
-console.log(sum); */
+// console.log(4);
+// console.log(5);
 
 // function asyncWorker(callback) {
 //     setTimeout(function() {
@@ -28,19 +35,27 @@ console.log(sum); */
 //     clearInterval(intervalHandle);
 // }, 7000);
 
-let asyncWorker = new Promise(function (resolve, reject) {
-    setTimeout(function() {
-        resolve();
-    }, 3000);
-});
+function asyncWorker() {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function() {
+            console.log(2);
+            resolve();
+        }, 3000);
+    });
+}
 
-asyncWorker.then(function () {
-    console.log("Async work complete!");
-    console.log(6);
-});
+async function main() {
+    console.log(1);
+    await asyncWorker();
+    console.log(3);
+}
 
-console.log(4);
-console.log(5);
+main();
+
+// asyncWorker().then(function () {
+//     console.log("Async work complete!");
+//     console.log(6);
+// });
 
 // function add(a, b) {
 //     return a + b;
